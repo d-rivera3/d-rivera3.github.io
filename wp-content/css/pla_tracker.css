@@ -1,0 +1,833 @@
+
+/* -------- Website Font CSS --------- */
+
+@import url('./font.css');
+
+
+/* -------- Toggle Switch CSS --------- */
+
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 20px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  .slider:before {
+	position: absolute;
+	content: "";
+	height: 15px;
+	width: 15px;
+	left: 4px;
+	bottom: 3px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  input:checked + .slider {
+	background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+	border-radius: 34px;
+  }
+  
+  .slider.round:before {
+	border-radius: 50%;
+  }
+
+
+/* -------- Website CSS --------- */
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "SCE-PS3 Rodin LATIN", sans-serif;
+    padding: 10px;
+    background: #f1f1f1;
+}  
+
+/* Style the header */
+.header {
+    display: block;
+    background-color: bisque;
+    padding: 10px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 25px;
+}
+
+
+/* Footer */
+.footer {
+	padding: 1px;
+	text-align: center;
+	background: black;
+	margin-top: 20px;
+	display: block;
+	position: fixed;
+	bottom: 0;
+}
+.footer p {
+	font-size: 15px;
+	font-style: italic;
+	color: white;
+	margin: 10px 0px 10px 0px;;
+}
+
+/* A general white card block to surround posts/switch options */
+.card {
+    display: block;
+    background-color: white;
+    padding: 10px;
+	margin-bottom: 10px;
+}
+
+/* affects p element in the card class element */
+.card p {
+    font-size: 22px;
+	font-weight: bold;
+	text-decoration: underline;
+	margin: 0px 0px 15px 0px;
+}
+
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    
+}
+  
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/* -------- Tracker Layout CSS --------- */
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the vertical tab navigation container  - for map nav */
+.vert_tab {
+    float: left;                /* positioning and formatting content to left of container */
+    border: 1px solid #ccc;     /* displaying border around the vert_tab area */
+    background-color: #d7ecf9;  /* setting background color of vert_tab area */
+    width: 30%;                 /* setting the tabs to be a page width of 30% */
+    height: auto;              /* setting height to match height of tab's main content */
+}
+
+/* Style the buttons inside the vertical tab */
+.vert_tab button {
+	font-family: 'SCE-PS3 Rodin LATIN';
+    display: block;
+    background-color: inherit;  /* get color from parent container (vert_tab) */
+    color: black;               /* set text font color */
+    font-size: 20px;            /* set text font size */
+    font-weight: bold;          /* set text font to be bold */
+    text-align: left;           /* set text to be left-aligned in button */
+    padding: 22px 16px;         /* padding - top:22px, bottom:16px */
+    width: 100%;                /* max width of parent container (vert_tab is to 30% of page) */
+    border: none;               /* no border around element, button:hover takes care of it in appealing manner */
+    outline: none;              /* define no outline */
+    cursor: pointer;            /* when cursor hovers over button, changes into a pointer cursor */
+    transition: 0.3s;           /* set duration of effects */
+}
+
+/* Change background color of buttons on hover */
+.vert_tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.vert_tab button.active {
+    background-color: #80c2ea;
+}
+
+/* Style the vert_tab main content container */
+.vert_tabcontent {
+    float: left;                /* positioning and formatting content to left of container */
+    padding: 0px 30px;          /* padding - top:0px, bottom:12px */
+    border: 1px solid #ccc;     /* solid border around element */
+    width: 70%;                 /* setting the tabs to be a page width of 70% */
+    height: auto;              /* setting height to match height of vert_tab's nagivation bar */
+	background-color: white;
+}
+
+
+/* any element with class attribute containing 'Map' - this makes sure the wisp
+images are located correctly to map image */
+[class$="Map"] {
+	position: relative;     /* setting positioning method of elements to relative */
+	width: 65%;            /* max width of parent container (vert_tabcontent is to 70% of page) */
+	margin-left: 20%;
+}
+
+/* CSS class selector - elements with class="map", this is for the map image  */
+.map { 
+    width: 100%;    /* max width of parent container (vert_tabcontent is to 70% of page) */
+}
+
+/* any element with id attribute containing '-wisp-', this sets the wisp images  */
+[id*="-wisp-"] {
+	position: absolute; /* setting positioning method of elements to absolute (must be this) */
+	float: left;        /* positioning and formatting content to left of container (vert_tabcontent) */
+	width: 2.7%;        /* set width size to be 2.7% of container */
+	z-index: 100%;      /* makes element to be layered above (this case the map)  */
+}
+
+
+
+/* -------- @Media Rule Tracker layout CSS --------- */
+
+
+@media only screen and (max-width: 1500px) {
+
+	/* Style the vert_tab main content container */
+	.vert_tabcontent {
+		float: left;                /* positioning and formatting content to left of container */
+		padding: 0px 30px;          /* padding - top:0px, bottom:12px */
+		border: 1px solid #ccc;     /* solid border around element */
+		width: 70%;                 /* setting the tabs to be a page width of 70% */
+		height: auto;
+		background-color: white;
+	}
+
+
+	/* any element with class attribute containing 'Map' - this makes sure the wisp
+	images are located correctly to map image */
+	[class$="Map"] {
+		position: relative;     /* setting positioning method of elements to relative */
+		width: 85%;            /* max width of parent container (vert_tabcontent is to 70% of page) */
+		margin-left: 10%;
+	}
+
+	/* CSS class selector - elements with class="map", this is for the map image  */
+	.map { 
+		width: 100%;    /* max width of parent container (vert_tabcontent is to 70% of page) */
+	}
+}
+
+
+@media only screen and (max-width: 1000px) {
+	/* Style the vertical tab navigation container  - for map nav */
+	.vert_tab {
+		float: left;                /* positioning and formatting content to left of container */
+		border: 1px solid #ccc;     /* displaying border around the vert_tab area */
+		background-color: #d7ecf9;  /* setting background color of vert_tab area */
+		width: 30%;                 /* setting the tabs to be a page width of 30% */
+		height: auto;              /* setting height to match height of tab's main content */
+	}
+
+	/* Style the buttons inside the vertical tab */
+	.vert_tab button {
+		font-family: 'SCE-PS3 Rodin LATIN';
+		display: block;
+		background-color: inherit;  /* get color from parent container (vert_tab) */
+		color: black;               /* set text font color */
+		font-size: 18px;            /* set text font size */
+		font-weight: bold;          /* set text font to be bold */
+		text-align: left;           /* set text to be left-aligned in button */
+		padding: 22px 16px;         /* padding - top:22px, bottom:16px */
+		width: 100%;                /* max width of parent container (vert_tab is to 30% of page) */
+		border: none;               /* no border around element, button:hover takes care of it in appealing manner */
+		outline: none;              /* define no outline */
+		cursor: pointer;            /* when cursor hovers over button, changes into a pointer cursor */
+		transition: 0.3s;           /* set duration of effects */
+	}
+
+	/* Style the vert_tab main content container */
+	.vert_tabcontent {
+		float: left;                /* positioning and formatting content to left of container */
+		padding: 0px 30px;          /* padding - top:0px, bottom:12px */
+		border: 1px solid #ccc;     /* solid border around element */
+		width: 70%;                 /* setting the tabs to be a page width of 70% */
+		height: auto;
+		background-color: white;
+	}
+
+
+	/* any element with class attribute containing 'Map' - this makes sure the wisp
+	images are located correctly to map image */
+	[class$="Map"] {
+		position: relative;     /* setting positioning method of elements to relative */
+		width: 90%;            /* max width of parent container (vert_tabcontent is to 70% of page) */
+		margin-left: 5%;
+	}
+
+	/* CSS class selector - elements with class="map", this is for the map image  */
+	.map { 
+		width: 100%;    /* max width of parent container (vert_tabcontent is to 70% of page) */
+	}
+}
+
+@media only screen and (max-width: 757px) {
+	/* Style the vertical tab navigation container  - for map nav */
+	.vert_tab {
+		float: left;                /* positioning and formatting content to left of container */
+		border: 1px solid #ccc;     /* displaying border around the vert_tab area */
+		background-color: #d7ecf9;  /* setting background color of vert_tab area */
+		width: 100%;                 /* setting the tabs to be a page width of 30% */
+		height: auto;              /* setting height to match height of tab's main content */
+	}
+
+	/* Style the buttons inside the vertical tab */
+	.vert_tab button {
+		font-family: 'SCE-PS3 Rodin LATIN';
+		display: block;
+		background-color: inherit;  /* get color from parent container (vert_tab) */
+		color: black;               /* set text font color */
+		font-size: 18px;            /* set text font size */
+		font-weight: bold;          /* set text font to be bold */
+		text-align: center;           /* set text to be left-aligned in button */
+		padding: 22px 16px;         /* padding - top:22px, bottom:16px */
+		width: 100%;                /* max width of parent container (vert_tab is to 30% of page) */
+		border: none;               /* no border around element, button:hover takes care of it in appealing manner */
+		outline: none;              /* define no outline */
+		cursor: pointer;            /* when cursor hovers over button, changes into a pointer cursor */
+		transition: 0.3s;           /* set duration of effects */
+	}
+
+	/* Style the vert_tab main content container */
+	.vert_tabcontent {
+		float: left;                /* positioning and formatting content to left of container */
+		padding: 0px 30px;          /* padding - top:0px, bottom:12px */
+		border: 1px solid #ccc;     /* solid border around element */
+		width: 100%;                 /* setting the tabs to be a page width of 70% */
+		height: auto;
+		background-color: white;
+	}
+
+
+	/* any element with class attribute containing 'Map' - this makes sure the wisp
+	images are located correctly to map image */
+	[class$="Map"] {
+		position: relative;     /* setting positioning method of elements to relative */
+		width: 90%;            /* max width of parent container (vert_tabcontent is to 70% of page) */
+		margin-left: 5%;
+	}
+
+	/* CSS class selector - elements with class="map", this is for the map image  */
+	.map { 
+		width: 100%;    /* max width of parent container (vert_tabcontent is to 70% of page) */
+	}
+}
+
+
+
+/* -------- Tracker Icons CSS --------- */
+
+
+/* Jubilife Village Wisps location relative to map */
+
+
+#jv-wisp-1 {   /* default wisp of beginning Spiritomb quest */
+	top: 28.5%;
+	left: 58%;
+}
+#jv-wisp-2 {   /* Behind Galaxy Team Building */
+	top: 8%;
+	left: 52.3%;
+}
+#jv-wisp-3 {   /* Behind Training Grounds building */
+	top: 11%;
+	left: 26%;
+}
+#jv-wisp-4 {   /* Behind Crafting Building new waterwheel */
+	top: 25%;
+	left: 39.8%;
+}
+#jv-wisp-5 {   /* Between leftmost row of houses */
+	top: 36.5%;
+	left: 45%;
+}
+#jv-wisp-6 {   /* Behind wooden farm shed */
+	top: 36.5%;
+	left: 24.5%;
+}
+#jv-wisp-7 {   /* Near tree by shed on Prelude Beach */
+	top: 76.5%;
+	left: 29%;
+}
+
+
+/* Obsidian Fieldlands Wisps location relative to map */
+
+
+#of-wisp-1 {   /* plateau between Floaro Garden & Aspiration Hill w/ shinx around */
+	top: 18.5%;
+	left: 26%;
+}
+#of-wisp-2 {   /* Plateau near Alpha Rapidash*/
+	top: 8%;
+	left: 67%;
+}
+#of-wisp-3 {   /* Side of mountian passing Worn Bridge*/
+	top: 22%;
+	left: 85.9%;
+}
+#of-wisp-4 {   /* North-West side of Lake Verity */
+	top: 35%;
+	left: 17%;
+}
+#of-wisp-5 {   /* Along Deertrack Path hillside, north of Deertack Height */
+	top: 33.2%;
+	left: 53.9%;
+}
+#of-wisp-6 {   /* Base of rocky mountian near Worn Bridge area, right of Alpha Floatzel */
+	top: 29.7%;
+	left: 72.2%;
+}
+#of-wisp-7 {   /* Small cliff, just sounth of Alpha Snorlax*/
+	top: 42.3%;
+	left: 31.8%;
+}
+#of-wisp-8 {   /* Small grassy island north of Obsidian Falls */
+	top: 39.8%;
+	left: 88%;
+}
+#of-wisp-9 {   /* Alongside rocky mountianside of west of Heights Camp*/
+	top: 49%;
+	left: 46.7%;
+}
+#of-wisp-10 {  /* Top of mountain over looking Heights Camp */
+	top: 52.7%;
+	left: 57.4%;
+}
+#of-wisp-11 {  /* Top of grassy mountian, (south?) near the flying Gyrados */ 
+	top: 52.1%;
+	left: 78.6%;
+}
+#of-wisp-12 {  /* Top of mountain where Machoke and Machop spawn, above Oreburrow Tunnel */
+	top: 56.6%;
+	left: 93.1%;
+}
+#of-wisp-13 {  /* Small island with aipom  */
+	top: 63%;
+	left: 39.5%;
+}
+#of-wisp-14 {  /* South of Nature Pantry */ 
+	top: 69%;
+	left: 54.8%;
+}
+#of-wisp-15 {  /* Edge of cliff of northern section of The Heartwood*/
+	top: 70.6%;
+	left: 78%;
+}
+#of-wisp-16 {  /* Small grassy cliff near Sandgem Flats and Alpha Alakazam */
+	top: 70.6%;
+	left: 12%;
+}
+#of-wisp-17 {  /* Ramanas Island, south of Alpha Infernape */
+	top: 85%;
+	left: 30.5%;
+}
+#of-wisp-18 {  /* On grassy hill overlooking the sandy area near flowing river */
+	top: 82%;
+	left: 66.5%;
+}
+#of-wisp-19 {  /* Small cliff south of Moss Rock in The HeartWood */
+	top: 91.5%;
+	left: 55%;
+}
+#of-wisp-20 {  /* Shoreline of land near Alpha Lopunny*/
+	top: 94.5%;
+	left: 35.7%;
+}
+
+
+/* Crimson Mirelands Wisps location relative to map */
+
+
+#cm-wisp-1 {   /* mountainside overlooking river north of Cloudpool Ridge */
+	top: 15.5%;
+	left: 25%;
+}
+#cm-wisp-2 {   /* among trees near rocky ridge in center of Cloudpool Ridge */
+	top: 18%;
+	left: 35%;
+}
+#cm-wisp-3 {   /* edge of the rocky mountain structure at the western entrance to Shrouded Ruins */
+	top: 15%;
+	left: 43%;
+}
+#cm-wisp-4 {   /* along the mountainside south of Cloudpool Ridge */
+	top: 27.5%;
+	left: 27.5%;
+}
+#cm-wisp-5 {   /* atop a large grassy hill near the Diamond Settlement */
+	top: 32%;
+	left: 51%;
+}
+#cm-wisp-6 {   /* between three trees near the mouth of Lake Valor */
+	top: 36.5%;
+	left: 71%;
+}
+#cm-wisp-7 {   /* on a large mountain with many flat platforms, south of Diamond Village */
+	top: 42.7%;
+	left: 55%;
+}
+#cm-wisp-8 {   /* an open clearing near a berry tree southeast of Solaceon Ruins, near Alpha Gastly */
+	top: 42.8%;
+	left: 42.8%;
+}
+#cm-wisp-9 {   /* small ledge near the river on the eastern side of Bolderoll Slope */
+	top: 47%;
+	left: 66%;
+}
+#cm-wisp-10 {  /* atop a small grassy plateau in the northwestern section of Cottonsedge Prairie */
+	top: 53%;
+	left: 70%;
+}
+#cm-wisp-11 {  /* edge on top of the hills overlooking Gapejaw Bog just east of the Golden Lowlands */ 
+	top: 50.5%;
+	left: 28.5%;
+}
+#cm-wisp-12 {  /* base of the mountainside just south of the Golden Lowlands marker, between two plateaus */
+	top: 53.5%;
+	left: 17%;
+}
+#cm-wisp-13 {  /* a raised grassy platform next to a tree in the center of Cottonsedge Prairie, near flying Togetic */
+	top: 58.4%;
+	left: 82%;
+}
+#cm-wisp-14 {  /* on top of a grassy plateau near the river southeast of Scarlet Bog, Yanma spawn north of Bogside Camp */ 
+	top: 60%;
+	left: 66.5%;
+}
+#cm-wisp-15 {  /* on mountain side cliff near two trees west of Alpha Yanmega */
+	top: 70%;
+	left: 90%;
+}
+#cm-wisp-16 {  /* atop a large grassy mountain overlooking the river south of Gapejaw Bog, north of boulder */
+	top: 70%;
+	left: 24%;
+}
+#cm-wisp-17 {  /* center of a small pond west of the Holm of Trials */
+	top: 83%;
+	left: 24.5%;
+}
+#cm-wisp-18 {  /* base of the mountains near the Holm of Trials at the southernmost point of the map */
+	top: 90%;
+	left: 39%;
+}
+#cm-wisp-19 {  /* small island mound with Alpha Sliggo */
+	top: 87%;
+	left: 56%;
+}
+#cm-wisp-20 {  /* along the rocky mountains south of Ursa's Ring near the bottom section of the map */
+	top: 91.5%;
+	left: 74%;
+}
+
+
+/* Cobalt Coastlands Wisps location relative to map */
+
+
+#cc-wisp-1 {   /* next to the mountainside at the northernmost point of the map near Islespy Shore */
+	top: 7.5%;
+	left: 28%;
+}
+#cc-wisp-2 {   /* very small island in the water at the northernmost point of the map */
+	top: 3.5%;
+	left: 57.7%;
+}
+#cc-wisp-3 {   /* on an island with a couple of rocks in the northeastern corner of the map */
+	top: 2%;
+	left: 91.5%;
+}
+#cc-wisp-4 {   /* amongst the lava pits on Firespit Island */
+	top: 17.5%;
+	left: 82%;
+}
+#cc-wisp-5 {   /* an island with two trees southeast of Firespit Island */
+	top: 28.1%;
+	left: 88.7%;
+}
+#cc-wisp-6 {   /* eastern edge of the circular structure surrounding the Turnback Cave */
+	top: 22.5%;
+	left: 20%;
+}
+#cc-wisp-7 {   /*on the mountain ridge at the western side of Spring Path */
+	top: 26%;
+	left: 8%;
+}
+#cc-wisp-8 {   /* alongside the northern mountainside located northeast of Veilstone Cape */
+	top: 27%;
+	left: 41%;
+}
+#cc-wisp-9 {   /* on a steep rocky structure northeast of Veilstone Cape, near aipom quest */
+	top: 29%;
+	left: 44.5%;
+}
+#cc-wisp-10 {  /* on a set of grassy platforms on the side of the mountainside, north of Octillery */
+	top: 37.5%;
+	left: 52%;
+}
+#cc-wisp-11 {  /* a grassy plateau on the north end of Gingko Landing, near flying Staraptor */ 
+	top: 44.5%;
+	left: 25.5%;
+}
+#cc-wisp-12 {  /* at the topmost rocky edge of the island north of the Tranquility Cove marker */
+	top: 49.8%;
+	left: 50.2%;
+}
+#cc-wisp-13 {  /* atop a large grassy ridge overlooking Tranquility Cove, east of Beachside camp */
+	top: 60.9%;
+	left: 10%;
+}
+#cc-wisp-14 {  /* edge of a long strip of sand near easternmost large rocky spikes east of Sand's Reach */ 
+	top: 63%;
+	left: 94.2%;
+}
+#cc-wisp-15 {  /* on the grassy mountainside slopes along Crossing Slope */
+	top: 68%;
+	left: 15%;
+}
+#cc-wisp-16 {  /* on a small rocky island in the water just west of the Sand's Reach marker */
+	top: 69.2%;
+	left: 68%;
+}
+#cc-wisp-17 {  /* on the small grassy rocks on the southern section of the beach at Gingko Landing */
+	top: 73.3%;
+	left: 37%;
+}
+#cc-wisp-18 {  /* small island in the middle of the large lake in Bathers' Lagoon */
+	top: 79.5%;
+	left: 50.5%;
+}
+#cc-wisp-19 {  /* one of the small islands in the ocean north of Tombolo Walk, near Alpha Chansey */
+	top: 83.1%;
+	left: 84.9%;
+}
+#cc-wisp-20 {  /* on a small island in the ocean south of Deadwood Haunt */
+	top: 93.7%;
+	left: 59.3%;
+}
+
+
+/* Coronet Highlands Wisps location relative to map */
+
+
+#ch-wisp-1 {   /* on the northeastern side of Moonview Arena, overlooking the ruins below */
+	top: 36.3%;
+	left: 13%;
+}
+#ch-wisp-2 {   /* atop the mountain ridge due east of Moonview Arena */
+	top: 39.8%;
+	left: 29.2%;
+}
+#ch-wisp-3 {   /* in the center of a ruined circular structure at ruins north of Primeval Grotto */
+	top: 49.7%;
+	left: 40%;
+}
+#ch-wisp-4 {   /* on a small island in the middle of the lake at Clamberclaw Cliffs */
+	top: 46.5%;
+	left: 67%;
+}
+#ch-wisp-5 {   /* between two trees near the coast due east of Clamberclaw Cliffs */
+	top: 47.6%;
+	left: 83.2%;
+}
+#ch-wisp-6 {   /* on the hilly mountainside right next to the Primeval Grotto map marker */
+	top: 53.3%;
+	left: 39.2%;
+}
+#ch-wisp-7 {   /* in Alpha Rhyperior area with the large rocky plateaus southwest of Primeval Grotto */
+	top: 57.5%;
+	left: 30.5%;
+}
+#ch-wisp-8 {   /* in large step-like grassy section with tombstones, a path going south of Summit Camp */
+	top: 54%;
+	left: 17.3%;
+}
+#ch-wisp-9 {   /* edge of a narrow rocky ridge with a single tree south of Clamberclaw Cliffs, west of Warden Ingo fight */
+	top: 58.2%;
+	left: 67%;
+}
+#ch-wisp-10 {  /* dead-end base of rocky mountains, west of Alpha Golem */
+	top: 68%;
+	left: 8.7%;
+}
+#ch-wisp-11 {  /* west edge of the large lake atop of waterfall */ 
+	top: 67.3%;
+	left: 27.2%;
+}
+#ch-wisp-12 {  /* atop the rocky mountain ridge south of Celestica Trail */
+	top: 70%;
+	left: 38.3%;
+}
+#ch-wisp-13 {  /* on a rocky protrusion northeast of Quarry exit, or path southwest of Mountain Camp */
+	top: 66.5%;
+	left: 63.7%;
+}
+#ch-wisp-14 {  /* on edge of a cliff southeast of the waterfall flowing out of Lonely Spring */ 
+	top: 70.3%;
+	left: 88.7%;
+}
+#ch-wisp-15 {  /*  atop a large flat surface with three trees near the river east of Fabled Spring */
+	top: 82.2%;
+	left: 20.5%;
+}
+#ch-wisp-16 {  /* base of the mountain ridge east of clefairy spawn at Fable Spring */
+	top: 88.4%;
+	left: 32.5%;
+}
+#ch-wisp-17 {  /* atop one of the square columns just inside the entrance to the Ancient Quarry */
+	top: 81.5%;
+	left: 56.2%;
+}
+#ch-wisp-18 {  /* on the grassy patch in between the two waterfalls northwest of Heavenward Lookout */
+	top: 78.5%;
+	left: 70.8%;
+}
+#ch-wisp-19 {  /* in the back of Wayward Cave, near Alpha Crobat */
+	top: 80.5%;
+	left: 72.3%;
+}
+#ch-wisp-20 {  /* near the mountain ridge by the river flowing out the southeastern section of the map */
+	top: 92.4%;
+	left: 66.7%;
+}
+
+
+/* Alabaster Icelands Wisps location relative to map */
+
+
+#il-wisp-1 {   /* atop a snowy plateau near the left side of Snowpoint Temple */
+	top: 2.5%;
+	left: 62.5%;
+}
+#il-wisp-2 {   /* in a small nook to the left after passing through the first puzzle door in Snowpoint Temple */
+	top: 5.5%;
+	left: 65%;
+}
+#il-wisp-3 {   /* behind one of the tents at the Pearl Settlement, below the hot springs */
+	top: 15.9%;
+	left: 74.5%;
+}
+#il-wisp-4 {   /*  atop the rocky structure to the right of the large waterfall flowing out of Lake Acuity */
+	top: 19.5%;
+	left: 48%;
+}
+#il-wisp-5 {   /* at the back of a cave at the south end of Lake Acuity, north of Icepeak Camp */
+	top: 21.7%;
+	left: 40.5%;
+}
+#il-wisp-6 {   /* in between two trees on the side of the mountain east of Glacier Terrace */
+	top: 21.8%;
+	left: 28.5%;
+}
+#il-wisp-7 {   /* on top of one of the icy structures surrounding the large ice formation */
+	top: 35.5%;
+	left: 61.5%;
+}
+#il-wisp-8 {   /* along the foothills to the west of Avalugg's Legacy, southeast of Snowfall Hot Spring */
+	top: 42.5%;
+	left: 33%;
+}
+#il-wisp-9 {   /* on a platform on the northern face of the mountain located southeast of Heart's Crag */
+	top: 46.5%;
+	left: 83%;
+}
+#il-wisp-10 {  /* tip of a steep structure jutting out of the ground south of Heart's Crag */
+	top: 47.6%;
+	left: 70%;
+}
+#il-wisp-11 {  /* in an icy cavern below the surface southeast of Avalugg's Legacy */ 
+	top: 50.7%;
+	left: 55.2%;
+}
+#il-wisp-12 {  /* on the surface of an icy hillside near the center of the map, north of Alpha Galie */
+	top: 53%;
+	left: 55.9%;
+}
+#il-wisp-13 {  /* on the mountainside just east of Icepeak Arena wrap */
+	top: 52.7%;
+	left: 31.9%;
+}
+#il-wisp-14 {  /* base of a semicircle-shaped mountain ridge located northeast of Arena's Approach */ 
+	top: 51.4%;
+	left: 17.2%;
+}
+#il-wisp-15 {  /* on a flat surface near the peak of the mountains southeast of Arena's Approach */
+	top: 67.2%;
+	left: 25.2%;
+}
+#il-wisp-16 {  /* alongside the mountain ridge to the right of northern exit of Herbenal Cave */
+	top: 67.3%;
+	left: 41.4%;
+}
+#il-wisp-17 {  /* on a small cone-shaped mountain east of Avalanche Slopes */
+	top: 69.3%;
+	left: 17.2%;
+}
+#il-wisp-18 {  /* at the bottom of a mountain ridge at the southern end of Avalanche Slopes */
+	top: 83.5%;
+	left: 8%;
+}
+#il-wisp-19 {  /* on a snowy shelf protruding out of the mountain just north of Whiteout Valley */
+	top: 76%;
+	left: 46%;
+}
+#il-wisp-20 {  /* on a steep ledge on the side of the mountain southeast of Whiteout Valley */
+	top: 82.7%;
+	left: 59.8%;
+}
