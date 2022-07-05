@@ -1,0 +1,379 @@
+/*** -------- Local Website Fonts --------- ***/
+
+@import url("fonts.css");
+
+/*** -------- CSS Reset --------- ***/
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*** -------- Future-Proof Scrollbar Style  --------- ***/
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #a68eff  rgba(255, 255, 255, 0.1);
+}
+  
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+*::-webkit-scrollbar-thumb {
+    /* background-image: linear-gradient(45deg, black, #a68eff); */
+    background-color: #FFF9F2;
+    border-radius: 10px;
+    --webkit-box-shadow: rgba(0,0,0,.12) 0 3px 13px 1px;
+}
+
+/*** -------- Setting Style for Body and Wrapper --------- ***/
+html { 
+    /* background-image: url("../test/page_bg.jpg");*/
+    /* background-color: #E8DFC5; */
+    background-color: #9C8975;
+
+}
+
+body {
+    margin: auto;
+    width: 95%;
+    min-height: 100vh;  /* sets min-height based on height of viewport */
+    /*background-image: linear-gradient(to left bottom, #F2E3C6 0%, #A7A1A5 100%); */
+    background-color: #E8D7C5;
+    overflow: auto;
+    position: relative;
+}
+
+.wrapper {
+    /* centers content */
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+
+    /* width content can extend to */
+    max-width: 960px; /* 2 */
+
+    /* adds padding on edges */ 
+    padding-right: 10px; /* 3 */
+    padding-left:  10px; /* 3 */
+}
+
+/*** -------- Testing Flexbox Layout --------- ***/
+
+.flex_wrapper {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.flex_content {
+    flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    padding: 20px;
+}
+
+/* Design */
+.flex_footer {
+    flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    padding: 20px;
+}
+
+
+footer {
+    /* background: #42A5F5; */
+    color: white;
+}
+
+
+/*** -------- Finalized Footer (Fixed to bottom of body) --------- ***/
+
+/* flex wrapper - also gives space for footer */
+.div_flex-wrapper {
+    height: auto;
+    margin: 0 auto -20%; /* footer height + space */
+    min-height: 100%;
+    padding: 0 0 20%; /* footer height + space */
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/* Fixeed to bottom of body */
+.div_fixed-footer{
+    font-family: "M PLUS 1p", sans-serif;
+    background: #111;
+    color: white;
+    padding: 1%;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    
+    /* container */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Fixed to bottom of body */
+.div_flex-footer{
+    font-family: "M PLUS 1p", sans-serif;
+    background: #111;
+    color: white;
+    padding: 1%;
+    bottom:0;
+    width: 100%;
+
+    /* container */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Setting Text and Legel Text Design*/
+.footer_text {
+    flex: 100%;
+    font-size: 20px;
+    padding: 5px;
+    margin: auto;
+    text-align: left;
+}
+
+.footer_legaltext{
+    flex: 100%;
+    font-size: 16px;
+    padding: 5px;
+    margin: auto;
+    text-align: left;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 767.98px) {
+    /* flex wrapper - also gives space for footer */
+    .div_flex-wrapper {
+        height: auto;
+        margin: 0 auto -50%; /* footer height + space */
+        min-height: 100%;
+        padding: 0 0 50%; /* footer height + space */
+        box-sizing: border-box;
+        overflow: auto;
+    }
+
+    .footer_text {
+        flex: 100%;
+        font-size: 16px;
+        padding: 5px;
+        margin: auto;
+        text-align: left;
+    }
+
+    .footer_legaltext{
+        flex: 100%;
+        font-size: 14px;
+        padding: 5px;
+        margin: auto;
+        text-align: left;
+    }
+}
+
+
+
+/*** -------- Header (Will Likely Delete) --------- ***/
+
+.header {
+    padding: 10px;
+    text-align: center;
+    background: bisque;
+    font-family: "Shippori Mincho", sans-serif;
+}
+
+
+/*** -------- Finalized Navigation Bar (Flexbox) --------- ***/
+
+/* Style the top navigation bar */
+.navbar {
+    display: flex;
+    background-color: #333;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+  
+/* Style the navigation bar links */
+.navbar a {
+    color: #FFF9F2;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+  
+/* Change color on hover */
+.navbar a:hover:not(.active) {
+    background-color: #FFF9F2;
+    color: black;
+}
+
+.active_page {
+    background-color: #658D9C;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 767.98px) {
+    .post_container, .navbar {   
+      flex-direction: column;
+    }
+}
+
+
+/*** -------- Main Content Example (Flexbox) --------- ***/
+
+/* Column container */
+.row_container {  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+
+/*** -------- Main Content - Post Content (Flexbox) --------- ***/
+
+/* Post Column Container */
+.post_container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 5% auto;
+    background-color: #FFF9F2;
+    box-shadow: 20px 20px 5px #9C8975;
+    /* box-shadow: 0 4px 8px 0px rgba(156, 137, 117, .5), 0 6px 20px 17px rgba(156, 137, 117, .49); */
+    font-family: 'Shippori Mincho', sans-serif;
+}
+
+/* Parts of a post */
+.post_title {
+    flex: 100%;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.25em;
+    background-color: #C5DFE8;
+    border-bottom: 1px solid black;
+}
+
+.post_title a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.post_title a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.post_image {
+    flex: 30%;
+    /* background-color: #e0e0e0; */
+}
+
+/* Centers image in the middle of flex box space */ 
+.post_image img{
+    width: 100%;
+    padding: 10%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.post_text {
+    flex: 70%;
+    /* background-color: #BEFEE9; */
+    padding: 20px;
+}
+
+.post_text p {
+    margin-bottom:2%;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 767.98px) {
+    /* Post Column Container */
+    .post_container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 10% auto;
+        background-color: #FFF9F2;
+        font-family: 'Shippori Mincho', sans-serif;
+    }
+
+    /* Centers image in the middle of flex box space */ 
+    .post_image img{
+        width: 100%;
+        padding: 10%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -0%);
+        transform: translate(-50%, -0%);
+    }
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (min-width: 1200px) {
+    /* Post Column Container */
+    .post_text {
+        font-size: 24px;
+        margin-top: 1%;
+    }
+
+    .post_title {
+        flex: 100%;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 2em;
+        background-color: #C5DFE8;
+    }
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (min-width: 1600px) {
+    /* Post Column Container */
+    .post_text {
+        font-size: 30px;
+    }
+
+    .post_title {
+        flex: 100%;
+        padding: 20px;
+        font-weight: bold;
+        font-size: 2.5em;
+        background-color: #C5DFE8;
+    }
+}

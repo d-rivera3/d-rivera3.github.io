@@ -1,98 +1,98 @@
 <!DOCTYPE html>
-<head>
-    <title>Spiritomb Wisps</title>
-    <meta name="author" content="d-rivera3">
-    <meta name="description" content="A game tool to assist collecting wisps for Spiritomb quest.">
-    <meta charset="utf-8">
-    <meta property="viewport" content="width-device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./wp-content/css/website.css">
-</head>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Experiment WebPage</title>
+        <meta http-equiv="author" content="d-rivera3">
+        <meta name="description" content="Experiment project to explore web designing">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./wp-assets/css/styles-flex.css" type="text/css" rel="stylesheet">
+    </head>
 
-<body>
-    <!-- Website Navigation -->
-    <div class="topnav">
-        <a href="./index.html">Home</a>
-    </div>
+    <body>
+        
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a class="active_page" href="./index.html">Home</a>
+            <!-- 
+            <a href="#">About</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            -->
+        </div>
 
-
-    <!-- Tracker Header -->
-    <div class="header">
-        <h1></h1>
-    </div><br>
-
-    
-    <!-- Main Page Content -->
-    <div class="row">
-
-        <!-- Posts -->
-        <div class="main_leftcolumn">
+        <!-- Flexbox Wrapper that Handles Main Content -->
+        <div class="div_flex-wrapper">
             
-            <!-- Arceus Tracker Post -->
-            <div class="card">                
-                <!-- Post title/link/date -->
-                <a href="./game_tools/pla_tracker.html" style="color: black;">
-                    <h2>Pokemon Legends: Arceus Tracker</h2>
-                </a>
-                <h3>Added March 4, 2022</h3>
-                <div class="row">
-                     <!-- Post image -->
-                    <div class="post_leftcolumn">
-                        <div class="img_canvas" style="height:200px;">
-                            <a href="./game_tools/pla_tracker.html">
-                                <img src="./wp-content/images/projects/Pokemon_Legends_Arceus_logo_EN.webp">
-                            </a>
-                        </div>
-                    </div>
-                    
-                     <!-- Post description -->
-                    <div class="post_rightcolumn">
-                        <p>This tracker is initially developed to assist keep track of the wisps in the Spiritomb quest.
-                            All the six areas where the wisps are to be found and collected by the player is completely implemented.
-                            <br><br>
-                            I do have future plans to add in the locations of all Unknown forms as well. Not sure if there is something
-                            else I want to add-in, but the possibility still optional if I want to add in something else.
-                        </p>
-                    </div>
-                </div> 
-            </div>
+            <!-- (Content) Pokemon Legends: Arceus Tracker -->
+            <div class="post_container">
+                <!-- Post Title -->
+                <div class="post_title">
+                    <a href="./game-tools/pla-tracker.html">
+                        <i>Pokémon&#8482 Legends: Arceus</i> - Tracker
+                    </a>
+                </div>
 
-        </div>
-
-        <!-- About -->
-        <div class="main_rightcolumn">
-            <!-- About side card -->
-            <div class="sidecard">
-                <h2>About</h2>
-                <p> Hi there. I'm a developer and a gamer that speedruns from time to time. I decided to create this website to make and post 
-                    about projects I've made. Projects would involve topics I'm interested in developing or making an assist tool for a game.
-                </p>
-
-                <h2>Links</h2>
-                <!-- Github -->
-                <a href="https://github.com/d-rivera3">
-                    <img src="./wp-content/images/icons/GitHub-Mark-32px.png" style="height: 20px; float: left;"title="GitHub">
-                </a>
-                <p style="margin-left: 30px;">d-rivera3</p>
+                <!-- Game Logo -->
+                <div class="post_image">
+                        <img src="./wp-assets/image/game/Pokemon_Legends_Arceus_logo_EN.png" title="Pokémon Legends: Arceus English Logo">
+                </div>
                 
-                <!-- Speedrun.com -->
-                <a href="https://www.speedrun.com/user/dansto619">
-                    <img src="./wp-content/images/icons/speedruncom.png" style="height: 20px; float: left;"title="speedrun.com">
-                </a>
-                <p style="margin-left: 30px;">dansto619</p>
+                <!-- Post Main Text -->
+                <div class="post_text">
+                    <p>
+                        This tracker was developed to assist keep track of the wisps in the Spiritomb quest. All the six areas where the wisps are to be found and collected by the player is completely implemented.
+                    </p><p>
+                        I'm thinking of addint in the locations of all Unknown forms as well in the future. Not sure if there is something else I want to add-in, but options are still possible if I do.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- (Content) Dragon Quest Builders 2 Any% Guide -->
+            <div class="post_container div_footerspace">
+                <!-- Post Title -->
+                <div class="post_title">
+                    <i>Dragon Quest Builders 2</i> - Any% Guide (WIP)
+                </div>
 
+                <!-- Game Logo -->
+                <div class="post_image">
+                        <img src="./wp-assets/image/game/DQB2-logo.png" title="Dragon Quest Builders 2 logo">
+                </div>
+                
+                <!-- Post Main Text -->
+                <div class="post_text">
+                    <p>
+                        I would like to speedrun this game in the future someday; however, this is a really long speedrun. Looking at the leaderboard
+                        on <i>Speedrun.com</i>, there's no provided guides/resources. Skimming through the VODs, it seems like you just play game normally
+                        and I have no clue if any qlitches even exist or used.
+                    </p><p>
+                        Therefore, I would at least like to make a guide to plan what and how many materials to collect, what buildings and items to make, what quests to do, and 
+                        maybe provide a route for the run. This is going to take a while to make.
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="div_fixed-footer">
+            <!-- Footer - Website Copyright Text -->
+            <div class="footer_text">
+                <i>&copy; 2022 d-rivera3</i>
+            </div>
+            
+            <!-- Footer Legal Text -->
+            <div class="footer_legaltext">
+                Games are property of their respective owners. <br>
+                Pokémon is a trademark of Nintendo. <br>
+                DRAGON QUEST and DRAGON QUEST BUILDERS logo are registered trademarks or trademarks of Square Enix Holdings Co., Ltd.
             </div>
         </div>
 
-    </div>
+        
+    </body>
 
-    
-    <!-- Website Footer -->
-    <div class="footer">
-        <p> website developed by 
-            <img src="./wp-content/images/icons/GitHub-Mark-Light-32px.png" style="height: 15px; float:inline-start; margin: 0px 0px 0px 5px;">
-            d-rivera3
-        </p>
-    </div>
-    
-</body>
+
 </html>

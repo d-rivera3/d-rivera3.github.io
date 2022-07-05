@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Experiment WebPage</title>
+        <meta http-equiv="author" content="d-rivera3">
+        <meta name="description" content="Experiment project to explore web designing">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../wp-assets/css/styles-flex.css" type="text/css" rel="stylesheet">
+        <link href="./pla-tracker_assets/css/pla-tracker.css" type="text/css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="../index.html">Home</a>
+            <!-- 
+            <a href="#">About</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            -->
+        </div>
+
+        <!-- Header -->
+        <div class="pla_header">
+            <h1>Pokémon™ Legends: Arceus Tracker </h1>
+            <h2>Spiritomb Wisps Quest</h2>
+        </div>
+        
+
+        <!-- KEEP - Custom Location Menu -->
+        <div class="div_select-container" onclick="showLocations()">
+            <!-- Location Name Textbox -->
+            <button class="locationName" id="displayLocation" value="">
+                « Choose Location »
+            </button>
+        </div>
+        <!-- the hidden options menu -->
+        <div class="locationList_container" id="LocationList">
+            <button class="choice" onclick="pickLocation('Jubilife Village'); openMap(event, 'Jubilife')"> Jubilife Village</button>
+            <button class="choice" onclick="pickLocation('Obsidian Fieldlands'); openMap(event, 'Fieldlands')"> Obsidian Fieldlands</button>
+            <button class="choice" onclick="pickLocation('Crimson Mirelands'); openMap(event, 'Mirelands')"> Crimson Mirelands</button>
+            <button class="choice" onclick="pickLocation('Cobalt Coastlands'); openMap(event, 'Coastlands')"> Cobalt Coastlands</button>
+            <button class="choice" onclick="pickLocation('Coronet Highlands'); openMap(event, 'Highlands')"> Coronet Highlands</button>
+            <button class="choice" onclick="pickLocation('Alabaster Icelands'); openMap(event, 'Icelands')"> Alabaster Icelands</button>
+        </div>
+
+
+
+        <!-- The Map -->
+        <div class="map_container">
+
+            <!-- Blank Map as Placeholder -->
+            <div id="blank" class="map_border" style="display: flex;">
+                <div class="map">
+                    <div class="Jubilife Map" style="visibility: hidden;">
+                        <img class="map" src="./pla-tracker_assets/Map/Jubilife_Village.png">
+                    </div> 
+                </div>
+            </div>
+
+            <!-- Jubilife Vilage Map -->
+            <div id="Jubilife" class="map_border">
+                <div class="map">
+                    <div class="Jubilife Map">
+                        <img class="map" src="./pla-tracker_assets/Map/Jubilife_Village.png">
+                        <img id="jv-wisp-1" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('jv-wisp-1')">
+                        <img id="jv-wisp-2" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('jv-wisp-2')">
+                        <img id="jv-wisp-3" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('jv-wisp-3')">
+                        <img id="jv-wisp-4" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('jv-wisp-4')">
+                        <img id="jv-wisp-5" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('jv-wisp-5')">
+                        <img id="jv-wisp-6" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('jv-wisp-6')">
+                        <img id="jv-wisp-7" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('jv-wisp-7')">
+                    </div> 
+                </div>
+            </div>
+
+            
+            <!-- Obsidian Fieldlands Map -->
+            <div id="Fieldlands" class="map_border">
+                <div class="map">
+                    <div class="Fieldlands Map">
+                        <img class="map" src="./pla-tracker_assets/Map/Obsidian_Fieldlands.png">
+                        <img id="of-wisp-1" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-1')">
+                        <img id="of-wisp-2" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-2')">
+                        <img id="of-wisp-3" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-3')">
+                        <img id="of-wisp-4" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-4')">
+                        <img id="of-wisp-5" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-5')">
+                        <img id="of-wisp-6" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-6')">
+                        <img id="of-wisp-7" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-7')">
+                        <img id="of-wisp-8" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-8')">
+                        <img id="of-wisp-9" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-9')">
+                        <img id="of-wisp-10" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-10')">
+                        <img id="of-wisp-11" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-11')">
+                        <img id="of-wisp-12" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-12')">
+                        <img id="of-wisp-13" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-13')">
+                        <img id="of-wisp-14" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-14')">
+                        <img id="of-wisp-15" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-15')">
+                        <img id="of-wisp-16" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-16')">
+                        <img id="of-wisp-17" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-17')">
+                        <img id="of-wisp-18" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-18')">
+                        <img id="of-wisp-19" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-19')">
+                        <img id="of-wisp-20" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('of-wisp-20')">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Crimson Mirelands Map -->
+            <div id="Mirelands" class="map_border">
+                <div class="map">
+                    <div class="Mirelands Map">
+                        <img class="map" src="./pla-tracker_assets/Map/Crimson_Mirelands.png">
+                        <img id="cm-wisp-1" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-1')">
+                        <img id="cm-wisp-2" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-2')">
+                        <img id="cm-wisp-3" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-3')">
+                        <img id="cm-wisp-4" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-4')">
+                        <img id="cm-wisp-5" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-5')">
+                        <img id="cm-wisp-6" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-6')">
+                        <img id="cm-wisp-7" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-7')">
+                        <img id="cm-wisp-8" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-8')">
+                        <img id="cm-wisp-9" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-9')">
+                        <img id="cm-wisp-10" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-10')">
+                        <img id="cm-wisp-11" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-11')">
+                        <img id="cm-wisp-12" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-12')">
+                        <img id="cm-wisp-13" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-13')">
+                        <img id="cm-wisp-14" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-14')">
+                        <img id="cm-wisp-15" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-15')">
+                        <img id="cm-wisp-16" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-16')">
+                        <img id="cm-wisp-17" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-17')">
+                        <img id="cm-wisp-18" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-18')">
+                        <img id="cm-wisp-19" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-19')">
+                        <img id="cm-wisp-20" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cm-wisp-20')">
+                    </div> 
+                </div>
+            </div>
+
+            
+            <!-- Cobalt Coastlands Map -->
+            <div id="Coastlands" class="map_border">
+                <div class="map">
+                    <div class="Coastlands Map">
+                        <img class="map" src="./pla-tracker_assets/Map/Cobalt_Coastlands.png">
+                        <img id="cc-wisp-1" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-1')">
+                        <img id="cc-wisp-2" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-2')">
+                        <img id="cc-wisp-3" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-3')">
+                        <img id="cc-wisp-4" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-4')">
+                        <img id="cc-wisp-5" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-5')">
+                        <img id="cc-wisp-6" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-6')">
+                        <img id="cc-wisp-7" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-7')">
+                        <img id="cc-wisp-8" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-8')">
+                        <img id="cc-wisp-9" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-9')">
+                        <img id="cc-wisp-10" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-10')">
+                        <img id="cc-wisp-11" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-11')">
+                        <img id="cc-wisp-12" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-12')">
+                        <img id="cc-wisp-13" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-13')">
+                        <img id="cc-wisp-14" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-14')">
+                        <img id="cc-wisp-15" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-15')">
+                        <img id="cc-wisp-16" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-16')">
+                        <img id="cc-wisp-17" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-17')">
+                        <img id="cc-wisp-18" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-18')">
+                        <img id="cc-wisp-19" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-19')">
+                        <img id="cc-wisp-20" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('cc-wisp-20')">
+                    </div> 
+                </div>
+            </div>
+
+            <!-- Coronet Highlands Map -->
+            <div id="Highlands" class="map_border">
+                <div class="map">
+                    <div class="Highlands Map">
+                        <img class="map" src="./pla-tracker_assets/Map/Coronet_Highlands.png">
+                        <img id="ch-wisp-1" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-1')">
+                        <img id="ch-wisp-2" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-2')">
+                        <img id="ch-wisp-3" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-3')">
+                        <img id="ch-wisp-4" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-4')">
+                        <img id="ch-wisp-5" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-5')">
+                        <img id="ch-wisp-6" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-6')">
+                        <img id="ch-wisp-7" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-7')">
+                        <img id="ch-wisp-8" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-8')">
+                        <img id="ch-wisp-9" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-9')">
+                        <img id="ch-wisp-10" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-10')">
+                        <img id="ch-wisp-11" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-11')">
+                        <img id="ch-wisp-12" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-12')">
+                        <img id="ch-wisp-13" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-13')">
+                        <img id="ch-wisp-14" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-14')">
+                        <img id="ch-wisp-15" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-15')">
+                        <img id="ch-wisp-16" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-16')">
+                        <img id="ch-wisp-17" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-17')">
+                        <img id="ch-wisp-18" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-18')">
+                        <img id="ch-wisp-19" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-19')">
+                        <img id="ch-wisp-20" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('ch-wisp-20')">
+                    </div> 
+                </div>
+            </div>
+
+            <!-- Alabaster Icelands Map -->
+            <div id="Icelands" class="map_border">
+                <div class="map">
+                    <div class="Icelands Map">
+                        <img class="map" src="./pla-tracker_assets/Map/Alabaster_Icelands.png">
+                        <img id="il-wisp-1" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-1')">
+                        <img id="il-wisp-2" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-2')">
+                        <img id="il-wisp-3" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-3')">
+                        <img id="il-wisp-4" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-4')">
+                        <img id="il-wisp-5" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-5')">
+                        <img id="il-wisp-6" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-6')">
+                        <img id="il-wisp-7" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-7')">
+                        <img id="il-wisp-8" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-8')">
+                        <img id="il-wisp-9" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-9')">
+                        <img id="il-wisp-10" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-10')">
+                        <img id="il-wisp-11" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-11')">
+                        <img id="il-wisp-12" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-12')">
+                        <img id="il-wisp-13" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-13')">
+                        <img id="il-wisp-14" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-14')">
+                        <img id="il-wisp-15" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-15')">
+                        <img id="il-wisp-16" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-16')">
+                        <img id="il-wisp-17" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-17')">
+                        <img id="il-wisp-18" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-18')">
+                        <img id="il-wisp-19" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-19')">
+                        <img id="il-wisp-20" src="./pla-tracker_assets/Other/Wisp_Icon.png" onclick="toggle('il-wisp-20')">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Container used as space gap between map and footer; Does nothing else -->
+        <div class="div_flex-wrapper" style="visibility: hidden;">
+            <!-- Post Container  -->
+            <div class="post_container">
+                <!-- Post Title -->
+                <div class="post_title">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="div_fixed-footer">
+            <!-- Footer - Website Copyright Text -->
+            <div class="footer_text">
+                <i>&copy; 2022 d-rivera3</i>
+            </div>
+            
+            <!-- Footer Legal Text -->
+            <div class="footer_legaltext">
+                Pokémon Legends: Arceus<br>
+                ©2022 Pokémon. ©1995–2022 Nintendo/Creatures Inc./GAME FREAK inc. Pokémon is a trademark of Nintendo. ©Nintendo. <br>
+            </div>
+        </div>
+
+
+
+        <!-- Tracker scripts for funtionality in externel js file-->
+        <script type="text/javascript" src="./pla-tracker_assets/js/map_scripts.js"></script>
+
+    </body>
+
+
+</html>
